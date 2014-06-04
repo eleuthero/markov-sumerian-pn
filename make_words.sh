@@ -1,0 +1,1 @@
+cat ur3_20140114_public.atf | grep -v "^[@#$&]" | cut -d' ' -f2- | tr -d "_#[]?!" | sed "s/\.\.\.//g" | tr -s "[[:space:]]" "\n" | grep -v "\d(" | sort | uniq | shuf | grep "-" | head -1000 > words.txt
